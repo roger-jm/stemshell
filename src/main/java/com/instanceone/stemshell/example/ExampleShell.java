@@ -4,6 +4,7 @@ package com.instanceone.stemshell.example;
 
 import com.instanceone.stemshell.AbstractShell;
 import com.instanceone.stemshell.Environment;
+import com.instanceone.stemshell.commands.Browse;
 import com.instanceone.stemshell.commands.Env;
 import com.instanceone.stemshell.commands.Exit;
 import com.instanceone.stemshell.commands.Help;
@@ -24,6 +25,7 @@ public class ExampleShell extends AbstractShell {
         env.addCommand(new Env("env"));
         env.addCommand(new Help("help", env));
         env.addCommand(new HistoryCmd("history"));
+        env.addCommand(new Browse("browse"));
         //env.setPrompt("stemshell%");
     }
 
